@@ -1,0 +1,64 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+html {
+  box-sizing: border-box;
+  /* 1rem = 10px */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: 1.6rem;
+
+}
+
+a {
+    text-decoration: none;
+
+    &:visited{
+      color: inherit;
+    }
+
+}
+
+.container{
+  width: 90%;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.section{
+  padding: 5rem 0;
+}
+
+h1, h2, h3, h4, h5 , h6{
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  margin: 0;
+  padding: 0;
+}
+
+progress[value] {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+   appearance: none;
+}
+
+::-webkit-progress-bar {
+  background-color: v.$gris;
+}
+
+::-webkit-progress-value{
+  background-color: v.$primary;
+}
