@@ -31,10 +31,11 @@
 
         <div class="hero">
             <div class="hero__info">
-                <p class="hero__text fw-600 hero__textBig">Hi, I'm a Freelancer</p>
-                <h1 class="hero__job">Web Builder</h1>
-                <p class="hero__text">Based in Valencia, Venezuela</p>
-                <a class="btn hero__btn">View My Works</a>
+                <p class="hero__text fw-600 hero__textBig animate__animated animate__fadeInUpBig">Hi, I'm a Freelancer
+                </p>
+                <h1 class="hero__job animate__animated animate__fadeInUpBig">Web Builder</h1>
+                <p class="hero__text animate__animated animate__fadeInUpBig">Based in Valencia, Venezuela</p>
+                <a class="btn hero__btn animate__animated animate__fadeInUpBig">View My Works</a>
             </div>
         </div>
     </header>
@@ -243,7 +244,7 @@
                     <div class="progreso__barra">
                         <label for="file" class="progreso__label">Javascript</label>
 
-                        <progress id="file" max="100" value="20" class="progreso__progress"></progress>
+                        <progress id="file" max="100" value="40" class="progreso__progress"></progress>
                     </div>
                 </div>
 
@@ -367,13 +368,30 @@
                 <p class="sectionName text-alignC">Client Speak</p>
                 <h3 class="sectionTitle text-alignC fw-600 comments__mb-5">What Some of my Clients Say</h3>
             </div>
+            <div id="carrousel" class="comments__carrousel">
+                <div id="slide1" class="comments__slide">
+                    <p class="comments__text text-alignC">"Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Porro, libero. Maxime ipsam nesciunt blanditiis necessitatibus quae cumque, corrupti tempora"
+                    </p>
 
-            <div class="comments__carousel">
-                <div class="comments__arrowsContainer">
-                    <a href="#" class="comments__arrow"><i class="bi bi-caret-left-fill"></i></a>
-                    <a href="#" class="comments__arrow"><i class="bi bi-caret-right-fill"></i></a>
+                    <div class="comments__box">
+                        <img src="/build/img/commentsImg.jpg" alt="" class="comments__pic">
+                        <p class="comments__name">Julius Magname</p>
+                        <p class="comments__subname">Mananger in Mc Donals</p>
+                    </div>
                 </div>
-                <div class="comments__slide">
+                <div id="slide2" class="comments__slide">
+                    <p class="comments__text text-alignC">"Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Porro, libero. Maxime ipsam nesciunt blanditiis necessitatibus quae cumque, corrupti tempora"
+                    </p>
+
+                    <div class="comments__box">
+                        <img src="/build/img/commentsImg.jpg" alt="" class="comments__pic">
+                        <p class="comments__name">Julius Magname</p>
+                        <p class="comments__subname">Mananger in Mc Donals</p>
+                    </div>
+                </div>
+                <div id="slide3" class="comments__slide">
                     <p class="comments__text text-alignC">"Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                         Porro, libero. Maxime ipsam nesciunt blanditiis necessitatibus quae cumque, corrupti tempora"
                     </p>
@@ -385,6 +403,11 @@
                     </div>
                 </div>
             </div>
+            <nav class="comments__nav">
+                <button id="slideBtn1" class="slideBtn"><i class="bi bi-circle-fill"></i></button>
+                <button id="slideBtn2" class="slideBtn"><i class="bi bi-circle-fill"></i></button>
+                <button id="slideBtn3" class="slideBtn"><i class="bi bi-circle-fill"></i></button>
+            </nav>
         </div>
     </section>
 
@@ -412,20 +435,20 @@
 
             <div class="footer__box">
                 <h3 class="footer__title fw-600">Estimate your Project?</h3>
-                <form action="" class="footer__form">
+                <form action="build/PHP/mail.php" method="POST" class="footer__form">
                     <div class="footer__formSections">
-                        <label for="" class="footer__label">What is Your Name:</label>
-                        <input type="text" class="footer__input">
+                        <label for="name" class="footer__label">What is Your Name:</label>
+                        <input name="name" type="text" class="footer__input">
                     </div>
                     <div class="footer__formSections">
-                        <label for="" class="footer__label">Your Email Address:</label>
-                        <input type="text" class="footer__input">
+                        <label for="email" class="footer__label">Your Email Address:</label>
+                        <input name="email" type="email" class="footer__input">
                     </div>
                     <div class="footer__formSections">
-                        <label for="" class="footer__label">How can I Help you?:</label>
-                        <textarea name="" id="" class="footer__textarea"></textarea>
+                        <label for="text" class="footer__label">How can I Help you?:</label>
+                        <textarea name="text" id="" class="footer__textarea"></textarea>
                     </div>
-                    <button class="footer__btn">Send <i class="bi bi-arrow-right-short"></i></button>
+                    <button type="submit" class="footer__btn">Send <i class="bi bi-arrow-right-short"></i></button>
                 </form>
             </div>
             <!--Cierre de footer__box-->
